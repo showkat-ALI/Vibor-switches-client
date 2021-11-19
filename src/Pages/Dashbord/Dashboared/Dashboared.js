@@ -41,15 +41,16 @@ function Dashboared(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   let { path, url } = useRouteMatch();
   const {admin}=useAuth()
+  const darkBlack="#000000"
 
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const drawer = (
-    <div style={{backgroundColor:"black"}}>
+  const drawer =(
+    <div>
       <Toolbar />
-      <Box style={{backgroundColor:"black"}} className="container">
+      <Box>
       
       {
         admin ?
@@ -91,7 +92,7 @@ function Dashboared(props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <Box sx={{ display: 'flex' }} style={{backgroundColor:"black"}}>
+    <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar
         position="fixed"
@@ -124,6 +125,7 @@ function Dashboared(props) {
         {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
         <Drawer
           container={container}
+
           variant="temporary"
           open={mobileOpen}
           onClose={handleDrawerToggle}
@@ -132,15 +134,25 @@ function Dashboared(props) {
           }}
           sx={{
             display: { xs: 'block', sm: 'none' },
+
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+            
           }}
         >
           {drawer}
         </Drawer>
+        
+
         <Drawer
           variant="permanent"
           sx={{
             display: { xs: 'none', sm: 'block' },
+            '.MuiDrawer-paperAnchorDockedLeft':{
+            bgcolor: `${darkBlack}`,
+            borderColor: 'secondary.main' 
+
+            },
+
             '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
           }}
           open
@@ -150,6 +162,7 @@ function Dashboared(props) {
       </Box>
       <Box
         component="main"
+        
         sx={{ flexGrow: 1, p: 3, width: { sm: `calc(100% - ${drawerWidth}px)` } }}
       >
         <Toolbar />
