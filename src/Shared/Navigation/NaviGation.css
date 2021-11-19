@@ -1,0 +1,33 @@
+.navPath {
+  color: white;
+}
+body {
+  background-color: black;
+}
+
+.btn-grad-logout {
+  background-image: linear-gradient(
+    to right,
+    #f00000 0%,
+    #dc281e 51%,
+    #f00000 100%
+  );
+}
+.btn-grad-logout {
+  margin: 10px;
+  padding: 5px 15px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad-logout:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
