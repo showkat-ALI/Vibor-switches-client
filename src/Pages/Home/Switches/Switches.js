@@ -14,9 +14,12 @@ const Switches = () => {
   }, []);
   if (switches.length === 0) {
     return (
-      <Spinner className="text-center" animation="border" role="status">
-        <span className="visually-hidden">Loading...</span>
+      <div className="d-flex justify-content-center">
+      <Spinner className="text-center d-flex justify-content-center" animation="border" role="status">
+          <Spinner animation="grow" className="text-center" variant="info" />
+
       </Spinner>
+      </div>
     );
   }
   return (
