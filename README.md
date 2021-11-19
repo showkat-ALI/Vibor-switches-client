@@ -4,7 +4,7 @@ Go and visite live  [here](https://vibor-switches.web.app/).
 
 ## This website can be used for thermostate switch selling 
 ## User can create account here
-(*) Different kind of switch can be sold
+* Different kind of switch can be sold
 ## This website can be used for thermostate switch selling 
 ## This website can be used for thermostate switch selling 
 
